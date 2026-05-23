@@ -64,13 +64,20 @@ const MusicPlayer = () => {
             onClick={handleEnter}
             className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-[#050505] cursor-pointer"
           >
-            <motion.p
+            <motion.div
               animate={{ opacity: [0.3, 1, 0.3] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="text-white text-xl md:text-3xl font-mono tracking-widest uppercase text-center px-4"
+              className="flex flex-col items-center justify-center text-white font-sans tracking-[0.2em]"
             >
-              Click to enter to the vardox58
-            </motion.p>
+              <div className="flex items-center gap-4 text-2xl md:text-4xl lg:text-5xl font-light">
+                <span className="font-mono opacity-80">&lt;/</span>
+                <span className="uppercase">CLICK ANYWHERE</span>
+                <span className="font-mono opacity-80">&gt;</span>
+              </div>
+              <div className="text-xl md:text-3xl lg:text-4xl font-light uppercase mt-2">
+                TO ENTER
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
