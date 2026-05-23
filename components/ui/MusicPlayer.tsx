@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const MusicPlayer = () => {
   const [entered, setEntered] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(0.3);
+  const [volume, setVolume] = useState(0.15);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   // Prevent scrolling while on enter screen
@@ -62,7 +62,7 @@ const MusicPlayer = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
             onClick={handleEnter}
-            className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-[#050505] cursor-pointer"
+            className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#050505] cursor-pointer"
           >
             <motion.div
               animate={{ opacity: [0.3, 1, 0.3] }}
